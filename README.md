@@ -1,6 +1,6 @@
 # Postman to swagger
 
-![coverage](./shields/coverage.svg) [![code style: prettier]
+![coverage](./shields/coverage.svg)
 
 We like to use postman, but often we get asked for swagger docs. There doesn't seem to be any open source postman v2.0.0 => swagger/openApi tools. Maybe a commercial reason, here is one for you.
 
