@@ -11,7 +11,8 @@
     "preinstall": "npm --prefix demo install",
     "test": "jest",
     "eslint": "lint-staged",
-    "git-add": "git add ."
+    "git-add": "git add .",
+    "postinstall": "npm run comile"
   },
   "files": [
     "lib"
