@@ -4,14 +4,14 @@
   "description": "Postman collections to swagger",
   "main": "lib/index.js",
   "scripts": {
-    "build": "rm -rf lib && babel src/ -d lib/  --ignore '**/*.spec.js'",
+    "build": "rm -rf lib && babel src/ -d lib/ --ignore '**/*.spec.js'",
     "compile:watch": "nodemon -x 'npm run build'",
     "coverage-shield": "coverage-shield",
     "preinstall": "npm --prefix demo install",
     "test": "jest",
     "eslint": "lint-staged",
     "git-add": "git add .",
-    "postinstall": "npm run comile"
+    "postinstall": "npm run build"
   },
   "files": [
     "lib"
@@ -56,9 +56,9 @@
     "git-add"
   ],
   "peerDependencies": {
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.11"
   },
   "dependencies": {
-    "postman-collection": "^3.2.1"
+    "postman-collection": "^3.4.5"
   }
 }
