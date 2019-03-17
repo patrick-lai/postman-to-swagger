@@ -1,6 +1,6 @@
 # Postman to swagger
 
-![coverage](./shields/coverage.svg) [![code style: prettier](https://img.shields.io/badge/code--style-IAG-purple.svg?longCache=true&style=flat-square)](https://chuck.auiag.corp/projects/DIGI/repos/eslint-config-iag/browse)
+![coverage](./shields/coverage.svg) [![code style: prettier]
 
 We like to use postman, but often we get asked for swagger docs. There doesn't seem to be any open source postman v2.0.0 => swagger/openApi tools. Maybe a commercial reason, here is one for you.
 
