@@ -2,7 +2,7 @@
 
 ![coverage](./shields/coverage.svg)
 
-We like to use postman, but often we get asked for swagger docs. There doesn't seem to be any open source postman v2.0.0 => swagger/openApi tools. Maybe a commercial reason, here is one for you.
+We like to use postman, but often we get asked for swagger docs. There doesn't seem to be any open source postman `v2.0.0` => swagger/openApi tools. Maybe a commercial reason, here is one for you.
 
 ## Usage
 
@@ -43,7 +43,7 @@ swagger.use('/', swaggerUi.serve, (req, res) => res.status(404).end());
 ## Future improvement
 
 - Apimatic has this `models` thing that is kind of useful, maybe we can also do that.
-- Use lodash/fp, lodash/flow to slim down module size
+- Use `lodash/fp`, `lodash/fp/flow` to slim down module size
 
 ## Repos to watch
 
