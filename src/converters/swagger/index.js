@@ -48,7 +48,7 @@ export default (collection) => {
   _.set(newSwagger, 'info', {
     title: collection.name,
     version: npm_package_version,
-    description: collection.description.content,
+    description: _.get(collection, 'description.content', 'No description'),
     host: convertCommonHost(collection),
   });
 
