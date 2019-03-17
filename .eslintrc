@@ -1,0 +1,13 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "react/sort-comp": 1,
+    "import/prefer-default-export": 0,
+    "prefer-destructuring": 0
+  },
+  "env": {
+    "jest": true,
+    "es6": true,
+    "node": true
+  }
+}
