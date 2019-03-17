@@ -55,6 +55,9 @@ export default (collection) => {
   const paths = {};
 
   collection.items.members.forEach((group) => {
+    // Ignore from docs folders starting with __
+    if (group.name.startsWith('__')) return;
+
     const tag = group.name;
     // The default root one
     if (!group.items) {
