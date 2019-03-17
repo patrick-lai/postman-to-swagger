@@ -22,6 +22,18 @@ const convertAndSave = postmanPath => {
 };
 ```
 
+With `swagger-ui-express`
+
+```js
+import postmanToSwagger from 'postman-to-swagger';
+import swaggerUi from 'swagger-ui-express';
+
+const swaggerJSON = postmanToSwagger(`${__dirname}/mockCollection.json`);
+swagger.get('/swagger', swaggerUi.setup(swaggerJSON));
+// Static stuff
+swagger.use('/', swaggerUi.serve, (req, res) => res.status(404).end());
+```
+
 ## What it converts
 
 - name, description, version
