@@ -17,6 +17,8 @@ health.get('/', (req, res) => res.json({ status: 'alive' }));
 const swagger = express.Router();
 const swaggerJSON = postmanToSwagger(`${__dirname}/mockCollection.json`);
 swagger.get('/swagger', swaggerUi.setup(swaggerJSON));
+// Static stuff
+swagger.use('/', swaggerUi.serve, (req, res) => res.status(404).end());
 
 app.use('/health', health);
 // Docs will be served on http://localhost:3001/docs/swagger
