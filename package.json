@@ -1,12 +1,11 @@
 {
   "name": "postman-to-swagger",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Postman collections to swagger",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "compile": "npm run babel-compile",
-    "compile:watch": "nodemon -x 'npm run compile'",
-    "babel-compile": "babel src/ -d lib/ --ignore __tests__,*.spec.js",
+    "build": "rm -rf lib && babel src/ -d lib/  --ignore '**/*.spec.js'",
+    "compile:watch": "nodemon -x 'npm run build'",
     "coverage-shield": "coverage-shield",
     "preinstall": "npm --prefix demo install",
     "test": "jest",
