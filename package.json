@@ -1,5 +1,5 @@
 {
-  "name": "postman-to-swagger",
+  "name": "postman-2-swagger",
   "version": "0.1.0",
   "description": "Postman collections to swagger",
   "main": "lib/index.js",
