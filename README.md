@@ -7,15 +7,19 @@ We like to use postman, but often we get asked for swagger docs. There doesn't s
 ## Usage
 
 ```js
-import postmanToSwagger from '@iag-packages/postman-to-swagger'
+import postmanToSwagger from 'postman-to-swagger';
 
 const convertAndSave = postmanPath => {
   // This returns the actual swagger v2.0 spec
-  const swaggerJson = postmanToSwagger(postmanPath)
+  const swaggerJson = postmanToSwagger(postmanPath);
 
   // Example if you want to save it somewhere
-  fs.writeFile('../_docs/swagger.json', JSON.stringify(swaggerJson, null, 2), 'utf8')
-}
+  fs.writeFile(
+    '../_docs/swagger.json',
+    JSON.stringify(swaggerJson, null, 2),
+    'utf8'
+  );
+};
 ```
 
 ## What it converts
