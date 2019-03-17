@@ -1,17 +1,15 @@
 {
   "name": "postman-2-swagger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Postman collections to swagger",
   "main": "lib/index.js",
   "scripts": {
     "build": "rm -rf lib && babel src/ -d lib/ --ignore '**/*.spec.js'",
     "compile:watch": "nodemon -x 'npm run build'",
     "coverage-shield": "coverage-shield",
-    "preinstall": "npm --prefix demo install",
     "test": "jest",
     "eslint": "lint-staged",
-    "git-add": "git add .",
-    "postinstall": "npm run build"
+    "git-add": "git add ."
   },
   "files": [
     "lib"

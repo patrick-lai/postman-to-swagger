@@ -40,6 +40,17 @@ swagger.use('/', swaggerUi.serve, (req, res) => res.status(404).end());
 - routes, folders
 - examples, status codes
 
+## Demo
+
+```bash
+# Build this lib
+npm run build
+# Go into demo folder and install
+npm install
+# Then run the demo
+npm run watch
+```
+
 ## Future improvement
 
 - Apimatic has this `models` thing that is kind of useful, maybe we can also do that.
