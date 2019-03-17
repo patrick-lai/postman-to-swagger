@@ -23,14 +23,13 @@ export function convertCommonHost(collection) {
 }
 
 export function convertSchemes(collection) {
-  return _(collection.items.members)
-    .map((item) => {
+  return _.uniq(
+    collection.items.members.map((item) => {
       const url = _.get(item, 'request.url');
       if (!url) return undefined;
       return url.protocol;
-    })
-    .uniq()
-    .filter(protocol => !!protocol);
+    }),
+  ).filter(protocol => !!protocol);
 }
 
 export function convertheaders(request) {
@@ -71,6 +70,7 @@ export function convertBody(request) {
 }
 
 export function convertResponses(_responses) {
+  /* istanbul ignore next */
   if (!_.get(_responses, 'members.length')) return undefined;
 
   const members = _responses.members;

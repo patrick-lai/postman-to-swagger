@@ -7,7 +7,6 @@ import fs from 'fs';
 
 // TODO: support postman urls too
 export const importCollection = (path) => {
-  /* istanbul ignore next */
   const json = JSON.parse(fs.readFileSync(path, 'utf8'));
   return new Collection(json);
 };

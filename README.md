@@ -10,7 +10,7 @@ We like to use postman, but often we get asked for swagger docs. There doesn't s
 import postmanToSwagger from 'postman-to-swagger';
 
 const convertAndSave = postmanPath => {
-  // This returns the actual swagger v2.0 spec
+  // This returns the actual swagger v2.0 spec as a json
   const swaggerJson = postmanToSwagger(postmanPath);
 
   // Example if you want to save it somewhere
@@ -31,6 +31,7 @@ const convertAndSave = postmanPath => {
 ## Future improvement
 
 - Apimatic has this `models` thing that is kind of useful, maybe we can also do that.
+- Use lodash/fp, lodash/flow to slim down module size
 
 ## Repos to watch
 
