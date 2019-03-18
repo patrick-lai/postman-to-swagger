@@ -9,9 +9,9 @@ We like to use postman, but often we get asked for swagger docs. There doesn't s
 ```js
 import postmanToSwagger from 'postman-to-swagger';
 
-const convertAndSave = postmanPath => {
+const convertAndSave = postmanJson => {
   // This returns the actual swagger v2.0 spec as a json
-  const swaggerJson = postmanToSwagger(postmanPath);
+  const swaggerJson = postmanToSwagger(postmanJson);
 
   // Example if you want to save it somewhere
   fs.writeFile(
@@ -27,9 +27,9 @@ With `swagger-ui-express`
 ```js
 import postmanToSwagger from 'postman-to-swagger';
 import swaggerUi from 'swagger-ui-express';
+import mockCollection from './mockCollection.json';
 
-const swaggerJSON = postmanToSwagger(`${__dirname}/mockCollection.json`);
-swagger.get('/swagger', swaggerUi.setup(swaggerJSON));
+swagger.get('/swagger', swaggerUi.setup(postmanToSwagger(mockCollection)));
 // Static stuff
 swagger.use('/', swaggerUi.serve, (req, res) => res.status(404).end());
 ```
