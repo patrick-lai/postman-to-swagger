@@ -2,12 +2,13 @@
  * Converts postman collections to swagger (maybe more formats later)
  */
 
+import { Collection } from 'postman-collection';
 import convertToSwagger from './converters/swagger';
 
-/* istanbul ignore next */
 const postmanToSwagger = (json) => {
+  /* istanbul ignore next */
   if (!json) throw new Error('Misuse, please look at docs');
-  return convertToSwagger(json);
+  return convertToSwagger(new Collection(json));
 };
 
 export default postmanToSwagger;
