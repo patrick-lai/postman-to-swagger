@@ -15,7 +15,8 @@
     "lib"
   ],
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/patrick-lai/postman-to-swagger/"
   },
   "keywords": [
     "postman",
